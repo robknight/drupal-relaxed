@@ -33,6 +33,9 @@ services:
   relaxed.revs_diff:
     class: Drupal\relaxed\RevisionDiff\RevisionDiff
     arguments: ['@entity.rev_index']
+  relaxed.changes:
+    class: Drupal\relaxed\Changes\Changes
+    arguments: ['@entity.sequence_index']
   paramconverter.entity_uuid:
     class: Drupal\relaxed\ParamConverter\EntityUuidConverter
     arguments: ['@entity.manager', '@entity.uuid_index', '@entity.rev_index']
